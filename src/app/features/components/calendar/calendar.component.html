@@ -1,0 +1,20 @@
+<app-calendar-month-view
+  *ngIf="events$ | async as events"
+  [view]="view"
+  [viewDate]="viewDate"
+  [events]="events">
+</app-calendar-month-view>
+
+<app-calendar-week-view
+  *ngIf="events$ | async as events"
+  [view]="view"
+  [viewDate]="viewDate"
+  [events]="events">
+</app-calendar-week-view>
+
+<app-calendar-day-view
+  *ngIf="events$ | async as events"
+  [view]="view"
+  [viewDate]="viewDate"
+  [events]="events">
+</app-calendar-day-view>

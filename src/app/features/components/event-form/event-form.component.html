@@ -1,0 +1,15 @@
+<form (ngSubmit)="submitForm()">
+    <div>
+      <label>Title:</label>
+      <input type="text" [(ngModel)]="event.title" name="title" required>
+    </div>
+    <div>
+      <label>Start Date:</label>
+      <input type="date" [(ngModel)]="event.startDate" name="startDate" required>
+    </div>
+    <div>
+      <label>End Date:</label>
+      <input type="date" [(ngModel)]="event.endDate" name="endDate" required>
+    </div>
+    <button type="submit">Add Event</button>
+  </form>

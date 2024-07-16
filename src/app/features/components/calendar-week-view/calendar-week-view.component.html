@@ -1,0 +1,8 @@
+<div class="calendar-week-view">
+  <mwl-calendar-week-view
+    [viewDate]="viewDate"
+    [events]="events"
+    (eventClicked)="handleEventClicked($event)"
+    (hourSegmentClicked)="handleHourSegmentClicked($event)">
+  </mwl-calendar-week-view>
+</div>

@@ -1,0 +1,90 @@
+// calendar.component.scss
+
+// Temel stil ayarları
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  // Genel container için flexbox düzeni
+  .calendar-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+  }
+  
+  // Header bölümü (gün, hafta, ay seçimleri)
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  // Gün, Hafta, Ay seçim butonları
+  .calendar-view-buttons {
+    display: flex;
+    gap: 0.5rem;
+  
+    @media (max-width: 768px) {
+      margin-top: 0.5rem;
+    }
+  
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #e0e0e0;
+      }
+    }
+  
+    .active {
+      background-color: #007bff;
+      color: white;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  
+  // Calendar view component container
+  .calendar-views {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  
+  // Calendar view bileşenleri için genel stil
+  .calendar-view {
+    flex: 1;
+    height: 100%;
+  }
+  
+  // Mobil görünüm için ekstra ayarlar
+  @media (max-width: 768px) {
+    .calendar-container {
+      padding: 0.5rem;
+    }
+  
+    .calendar-views {
+      gap: 0.5rem;
+    }
+  }
+  
